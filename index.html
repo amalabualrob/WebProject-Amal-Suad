@@ -335,6 +335,115 @@
     .nav-btn {
         display: none !important;
     }
+
+    /*reviews*/
+.reviews{
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  align-items: center;
+  justify-content: center;
+}
+
+.reviews h2{
+  margin: 0;
+}
+
+.reviews-container{
+  display: flex;
+  gap: 22px;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.review-card{
+  width: 240px;
+  padding: 18px 16px 14px;
+  background: #fff;
+  border: 2px solid #8ec9c9;
+  border-radius: 4px;
+  position: relative;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.review-card::after{
+  content: "”";
+  position: absolute;
+  top: 6px;
+  right: 14px;
+  font-size: 72px;
+  color: #e3e9ec;
+  font-weight: bold;
+  letter-spacing: -8px;
+}
+
+.review-head{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.review-head img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review-head span{
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.review-card p{
+  font-size: 11px;
+  line-height: 1.5;
+  color: #6b6b6b;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.stars{
+  display: flex;
+  gap: 4px;
+  position: relative;
+  z-index: 1;
+}
+
+.stars i{
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  background: transparent;
+  border: 2px solid #4aa6a6;
+}
+
+.stars i.fill{
+  background: #4aa6a6;
+}
+
+@media (max-width: 900px){
+  .reviews-container{
+    flex-wrap: wrap;
+  }
+}
     </style>
 </head>
 <body>
